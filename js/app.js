@@ -20,10 +20,10 @@ function adicionar() {
     }
 
     let nomeProduto = produto.split('-')[0];
-    let valorUnitario = produto.split('R$')[1];
+    let valorUnitario = parseFloat(produto.split('R$')[1]);
 
     // calcular o preço, o nosso subtotal.
-    let preco = quantidade * valorUnitario;
+    let preco = parseFloat(quantidade * valorUnitario);
     let carrinho = document.getElementById('lista-produtos');
 
     // adicionar no carrinho
